@@ -1,0 +1,36 @@
+body {
+    background-color: #20181F;
+
+}
+.constrain {
+    max-width: 900px;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: 2px solid #ff9800;
+    padding: 1em; }
+
+h1 {
+    text-align: center; }
+
+h2 {
+    display: none;
+    cursor: pointer; }
+
+#detail1, #detail2, #detail3, #detail4 {
+    background: black;
+    padding-left: 2em;
+    display: none;
+    color: #212121;
+    border-radius: 10px;
+    border: 2px solid #ff9800;
+    font-size: 1.3em; }
+
+img{
+    width: 50%;
+    height: auto;
+    padding: 1em;
+
+}
+p, li {
+    color: white;
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Introducing JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#head1").fadeIn(1000);
+            $("#head2").fadeIn(3000);
+            $("#head3").fadeIn(5000);
+            $("#head4").fadeIn(7000);
+
+
+            $("#head1").click(function(){
+                $("#detail1").slideToggle("slow");
+            })
+            $("#head2").click(function(){
+                $("#detail2").slideToggle("slow");
+            })
+           $("#head3").click(function(){
+               $("#detail3").slideToggle("slow");
+           })
+
+
+            $("#button1").click(function(){               //this makes the haunted house dance around
+                var div = $("img1");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '600px', opacity: '0.8'}, "slow");
+            });
+
+            $("#button2").click(function(){               //this makes the creepy creature hide/show
+                $("img2").hide();
+                $("img2").show();
+            });
+
+            $("#head3").click(function(){                 //this slides the pumpkins
+                $("#detail3").animate({left: '400px'});
+            });
+
+            $("#head4").click(function(){                 //this makes the text fade in
+                $("#detail4").fadeIn(7000);
+            })
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+<main class="w3-conatainer constrain w3-deep-orange">
+    <h1>Happy Halloween!</h1>
+
+    <h2 id ="head1" class ="w3-green">Haunted House</h2>
+    <div id="detail1">
+        <button class ="button1">Start Animation</button>
+        <img id="img1" src="images/hauntedhouse.jpg" alt="haunted house">
+    </div>
+
+    <h2 id="head2" class = "w3-green">Scary Creature</h2>
+    <div id="detail2">
+        <img id="img2" src="images/scaryface.jpg" alt="scary face">
+        <p>If you click on the "Hide" button, I will disappear.</p>
+
+        <button class="button2" id="hide">Hide</button>
+        <button class="button2" id="show">Show</button>
+    </div>
+
+
+    <h2 id ="head3" class = "w3-green">Cute Pumpkins</h2>
+    <div id="detail3">
+        <img src="images/pumpkins.jpg" alt="cute pumpkins">
+
+    </div>
+
+
+    <h2 id = "head4" class = "w3-green">Fun Facts</h2>
+    <div id="detail4">
+        <ul>
+        <li>Halloween is the second highest grossing commercial holiday after Christmas.</li>
+        <li>The first Jack O’Lanterns were actually made from turnips.</li>
+        <li>Samhainophobia is the fear of Halloween.</li>
+        <li>Dressing up as ghouls and other spooks originated from the ancient Celtic tradition of townspeople disguising themselves as demons and spirits. The Celts believed that disguising themselves this way would allow them to escape the notice of the real spirits wandering the streets during Samhain."</li>
+        </ul>
+
+    </div>
+</main>
+</body>
+</html>
