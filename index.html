@@ -27,18 +27,20 @@
 
 
             $("#button1").click(function(){               //this makes the haunted house dance around
-                var div = $("img1");
-                div.animate({height: '300px', opacity: '0.4'}, "slow");
-                div.animate({width: '600px', opacity: '0.8'}, "slow");
+                $("#img1").animate({height: '300px', opacity: '0.4'}, "slow");
+                $("#img1").animate({width: '600px', opacity: '0.8'}, "slow");
             });
 
-            $("#button2").click(function(){               //this makes the creepy creature hide/show
-                $("img2").hide();
-                $("img2").show();
+            $("#hide").click(function(){               //this makes the creepy creature hide/show
+                $("#img2").hide();
+
+            });
+            $("#show").click(function(){
+                $("#img2").show();
             });
 
-            $("#head3").click(function(){                 //this slides the pumpkins
-                $("#detail3").animate({left: '400px'});
+            $("#move").hover(function(){                 //this slides the pumpkins
+                $("#move").animate({left: '400px'});
             });
 
             $("#head4").click(function(){                 //this makes the text fade in
@@ -57,7 +59,7 @@
 
     <h2 id ="head1" class ="w3-green">Haunted House</h2>
     <div id="detail1">
-        <button class ="button1">Start Animation</button>
+        <button id="button1">Start Animation</button>
         <img id="img1" src="images/hauntedhouse.jpg" alt="haunted house">
     </div>
 
@@ -73,8 +75,9 @@
 
     <h2 id ="head3" class = "w3-green">Cute Pumpkins</h2>
     <div id="detail3">
+        <div id="move">
         <img src="images/pumpkins.jpg" alt="cute pumpkins">
-
+    </div>
     </div>
 
 

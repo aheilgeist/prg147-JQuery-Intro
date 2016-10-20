@@ -26,11 +26,22 @@ h2 {
     font-size: 1.3em; }
 
 img{
-    width: 50%;
+    width: 100%;
     height: auto;
     padding: 1em;
 
 }
+
+#img1 {
+    position: relative;
+}
 p, li {
     color: white;
+}
+
+#move {
+    width: 300px;
+    height: 300px;
+    background: orange;
+    position: relative;
 }
